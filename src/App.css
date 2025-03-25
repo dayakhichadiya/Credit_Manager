@@ -1,0 +1,41 @@
+.credit-card-form {
+  background: linear-gradient(25deg, #fff, #eee);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.credit-card-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.card-type-visa {
+  background: linear-gradient(25deg, #0f509e, #1399cd);
+}
+
+.card-type-mastercard {
+  background: linear-gradient(25deg, #eb001b, #f79e1b);
+}
+
+
+
+.card-type-visa {
+  background: linear-gradient(25deg, #0f509e, #1399cd);
+}
+
+.card-type-mastercard {
+  background: linear-gradient(25deg, #eb001b, #f79e1b);
+}
+
+.credit-card-form.light-theme {
+  background: #fff;
+  color: #333;
+}
+
+.credit-card-form.dark-theme {
+  background: #333;
+  color: #fff;
+}

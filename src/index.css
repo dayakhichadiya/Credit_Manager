@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .heading{
+    @apply p-2 bg-blue-500 text-white text-center text-3xl
+  }
+  .heading2{
+    @apply p-2 bg-blue-200 text-black text-center text-3xl
+  }
+
+
+  .next-btn{
+    @apply p-2 bg-blue-500 rounded-md m-2 ml-[100px] mr-[100px] text-white text-center
+  }
+
+  .prev-btn{
+    @apply p-2 bg-blue-500 rounded-md m-4 ml-[900px] text-white text-center
+  }
+  
+  .btn{
+    @apply p-2 bg-blue-500 rounded-md m-4 text-white text-center
+  }
+}
