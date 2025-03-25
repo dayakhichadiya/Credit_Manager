@@ -1,66 +1,65 @@
-import React from 'react'
-import logo from '../assets/logo1.png'
-import img1 from '../assets/img1.png'
-import img3 from '../assets/img3.png'
-import img2 from '../assets/img2.png'
-import img4 from '../assets/img4.png'
-import { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router'
-import { useNavigate } from 'react-router'
+// import React from 'react'
+// import logo from '../assets/logo1.png'
+// import img1 from '../assets/img1.png'
+// import img3 from '../assets/img3.png'
+// import img2 from '../assets/img2.png'
+// import img4 from '../assets/img4.png'
+// import { Link } from 'react-router'
+
+
+// const Home = () => {
+
+  
+//   return (
+//     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-300 flex flex-col items-center justify-center">
+    
+      
+
+//       <section className="flex flex-col md:flex-row items-center max-w-6xl mt-12 px-6">
+
+//         <div className="md:w-1/2 text-center md:text-left space-y-4 animate-fadeIn">
+//           <h1 className="text-4xl font-bold text-blue-700">
+//             Credit Card <span className="text-blue-500">Management</span> System
+//           </h1>
+//           <p className="text-gray-600">
+//             Securely manage your credit cards, track transactions, and improve your financial health.
+//           </p>
+//           <Link to="/login">
+//           <button className="bg-blue-600 text-white px-6 py-3 rounded-lg mt-4 transition-transform hover:scale-105">
+//             Get Started
+//           </button>
+//           </Link>
+//         </div>
+
+//         <div className="md:w-1/2 flex justify-center animate-fadeIn">
+//           <img
+//             src={img4}
+//             alt="Credit Card Management"
+//             className="w-80 md:w-full drop-shadow-lg"
+//           />
+//         </div>
+//       </section>
+
+      
+//     </div>
+//   );
+// };
+
+// export default Home;
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import img4 from '../assets/img4.png';
+import health4 from '../assets/health4.jpg'
+import secure3img from '../assets/secure3.avif'
+import trackimg4 from '../assets/track3.jpg'
 
 const Home = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const navigate = useNavigate()
-  const login=()=>{
-
-    navigate("/login")
-  }
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-300 flex flex-col items-center justify-center">
-     
-      {/* Navbar */}
-      <nav className="w-full max-w-6xl mt-8 flex justify-between items-center py-4 px-6 bg-white shadow-md rounded-lg relative">
-        <div className="text-xl font-bold text-blue-600">CREDIT MANAGER</div>
-
-        <ul className="hidden md:flex space-x-6 text-gray-700">
-          <li className="hover:text-blue-600 cursor-pointer">Home</li>
-          <li className="hover:text-blue-600 cursor-pointer">Add Card</li>
-          <li className="hover:text-blue-600 cursor-pointer">My Cards</li>
-          <li className="hover:text-blue-600 cursor-pointer">About Us</li>
-          <li className="hover:text-blue-600 cursor-pointer">Services</li>
-          <li className="hover:text-blue-600 cursor-pointer">Contact</li>
-        </ul>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-blue-600 text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-
-        {menuOpen && (
-          <ul className="absolute top-16 left-0 w-full bg-white shadow-md rounded-lg p-4 flex flex-col space-y-4 text-gray-700 md:hidden">
-            <li className="hover:text-blue-600 cursor-pointer">Home</li>
-            <li className="hover:text-blue-600 cursor-pointer">Add Card</li>
-          <li className="hover:text-blue-600 cursor-pointer">My Cards</li>
-            <li className="hover:text-blue-600 cursor-pointer">About Us</li>
-            <li className="hover:text-blue-600 cursor-pointer">Services</li>
-            <li className="hover:text-blue-600 cursor-pointer">Contact</li>
-          </ul>
-        )}
-
-
-        <button onClick={login} className="bg-blue-600 text-white px-4 py-2 rounded-md hidden md:block transition-transform hover:scale-105">
-          Sign Up
-        </button>
-
-      </nav>
-
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-300 flex flex-col items-center">
+      
+      {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center max-w-6xl mt-12 px-6">
-
         <div className="md:w-1/2 text-center md:text-left space-y-4 animate-fadeIn">
           <h1 className="text-4xl font-bold text-blue-700">
             Credit Card <span className="text-blue-500">Management</span> System
@@ -68,19 +67,75 @@ const Home = () => {
           <p className="text-gray-600">
             Securely manage your credit cards, track transactions, and improve your financial health.
           </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg mt-4 transition-transform hover:scale-105">
-            Get Started
-          </button>
+          <Link to="/login">
+            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg mt-4 transition-transform hover:scale-105">
+              Get Started
+            </button>
+          </Link>
         </div>
-
         <div className="md:w-1/2 flex justify-center animate-fadeIn">
-          <img
-            src={img4}
-            alt="Credit Card Management"
-            className="w-80 md:w-full drop-shadow-lg"
-          />
+          <img src={img4} alt="Credit Card Management" className="w-80 md:w-full drop-shadow-lg" />
         </div>
       </section>
+
+      {/* Features Section */}
+      <section className="max-w-6xl px-6 mt-16 text-center">
+        <h2 className="text-3xl font-bold text-blue-700">Why Choose Us?</h2>
+        <p className="text-gray-600 mt-2">Our system helps you manage your credit cards effortlessly.</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <img src={secure3img} alt="Secure Management" className="w-28 mx-auto" />
+            <h3 className="text-xl font-semibold text-blue-600 mt-4">Secure Management</h3>
+            <p className="text-gray-500 mt-2">Your credit card details are encrypted and safe.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <img src={trackimg4} alt="Track Transactions" className="w-28 mx-auto" />
+            <h3 className="text-xl font-semibold text-blue-600 mt-4">Track Transactions</h3>
+            <p className="text-gray-500 mt-2">View all your transactions in real-time.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <img src={health4} alt="Financial Health" className="w-28 mx-auto" />
+            <h3 className="text-xl font-semibold text-blue-600 mt-4">Financial Health</h3>
+            <p className="text-gray-500 mt-2">Get insights to improve your financial stability.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="max-w-6xl px-6 mt-16 text-center">
+        <h2 className="text-3xl font-bold text-blue-700">What Our Users Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-gray-600 italic">
+              "This app has made managing my credit cards so easy! Highly recommend."
+            </p>
+            <h4 className="text-blue-600 mt-4 font-semibold">- Sarah Johnson</h4>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-gray-600 italic">
+              "A lifesaver for tracking my spending and keeping my finances in check."
+            </p>
+            <h4 className="text-blue-600 mt-4 font-semibold">- Mark Wilson</h4>
+          </div>
+        </div>
+      </section>
+
+      {/* Action Section */}
+      <section className="max-w-6xl px-6 mt-16 text-center">
+        <h2 className="text-3xl font-bold text-blue-700">Start Managing Your Credit Cards Today</h2>
+        <p className="text-gray-600 mt-2">Join thousands of users who trust our platform.</p>
+        <Link to="/register">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg mt-4 transition-transform hover:scale-105">
+            Sign Up Now
+          </button>
+        </Link>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full bg-blue-700 text-white text-center py-6 mt-12">
+        <p>&copy; {new Date().getFullYear()} Credit Manager. All rights reserved.</p>
+      </footer>
+      
     </div>
   );
 };
