@@ -7,14 +7,14 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain:import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
-  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
-  appId:import.meta.env.VITE_APPID,
-  measurementId:import.meta.env.VITE_MEASUREMENTID
-};
+    apiKey: "AIzaSyAEUKXrjvqyYHSktvSTs2b4dAgn3JqcgYg",
+    authDomain: "credit-card-management-beb7c.firebaseapp.com",
+    projectId: "credit-card-management-beb7c",
+    storageBucket: "credit-card-management-beb7c.firebasestorage.app",
+    messagingSenderId: "713295384809",
+    appId: "1:713295384809:web:78d6cf3372d15c468a6078",
+    measurementId: "G-FE7MHPW8P4"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
